@@ -16,11 +16,10 @@ Archana, Kristine, Jacky, Allison, Carol
 7. What can we learn about ATMs?
 
 ## Datasets Used:
-Our Data Ultimately Came From US Census and Google API
-
-US Census Bureau (https://www.census.gov/data.html or https://datausa.io/about/datasets) for demographic data for the City of Richmond and surrounding Henrico and Chesterfield counties. We intend to collect data on population density, racial composition, education level, economic status, age, and poverty (for instance).
-
-“The census data itself is grouped by geographically by zip code, so we elected to focus on the city of Richmond and surrounding Henrico and Chesterfield counties. In all, we identified 36 non-post office box zip codes, of which 33 returned census data.”
+NYC Pedestrian/Bicycle Crash Data: https://www.policedatainitiative.org/crash-data/
+Police Data Initiative Dashboard: https://www.policedatainitiative.org/datasets/#all
+Open Data better API information for calls  from Chapel Hill -PL https://www.chapelhillopendata.org/explore/dataset/pedestrian-crashes-chapel-hill-region/api/
+https://www.chapelhillopendata.org/explore/dataset/bicycle-crash-data-chapel-hill-region/api/
 
 ## Breakdown of Tasks:
 1. Get dataset from sources.
@@ -66,4 +65,4 @@ Be flexible and change approach as needed, data was difficult to get; not convin
 More time to spend with Master Card and Visa; still convinced this is possible, just not within our time frame or ability at this point
 Relied on ATMs listed in Google;  assume large organizations and a few small entities list their ATMs in google. 
 
-# Tools Used Jupiter NoteBook /Python, JavaScript, HTML, MongoDB
+# Tools Used:  Jupiter NoteBook /Python, JavaScript, HTML, MongoDB
