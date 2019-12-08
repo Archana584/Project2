@@ -50,6 +50,10 @@ From <https://catalog.data.gov/dataset/pedestrian-crashes>
 15 people were killed as a result of bicycle and pedestrian accidents from 2007-2013!
 [GitHub]https://cbwittig.github.io/Project2/index.html)
 ![GitHub Logo](Project2/img/basemap_v2.png)
+![GitHub Logo](Project2/img/Bike_ages.png)
+![GitHub Logo](Project2/img/basemap_v2.png)
+![GitHub Logo](Project2/img/basemap_v2.png)
+![GitHub Logo](Project2/img/basemap_v2.png)
 
 
 
