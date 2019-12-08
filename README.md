@@ -54,6 +54,8 @@ From <https://catalog.data.gov/dataset/pedestrian-crashes>
 ![GitHub Logo](Project2/img/bike_carspeed.png)
 ![GitHub Logo](Project2/img/bike_comparison.png)
 ![GitHub Logo](Project2/img/bike_data.png)
-
-
-
+![GitHub Logo](Project2/img/mongo.png)
+![GitHub Logo](Project2/img/ped_data.png)
+![GitHub Logo](Project2/img/ped_ages.png)
+![GitHub Logo](Project2/img/peds_comparision.png)
+![GitHub Logo](Project2/img/peds_speed.png)
