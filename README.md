@@ -7,62 +7,45 @@ Archana, Kristine, Jacky, Allison, Carol
 
 
 ## DATA ANALYSIS-Questions
-1. What is the relationship between median household income, education level and ATM location/number?
-2. What relationships between population density and ATM number?
-3. Are there relationships between ATM use fees and demographic variables?
-4. Are there significant relationships between a demographic area and the types of ATMs found in that area?
-5. We wanted to examine the placement of ATM machines in today’s banking landscape.  We wanted to understand who owned them, where they were placed, and what strategies owners use to place ATM machines today.
-6. Who uses them & who owns them?
-7. What can we learn about ATMs?
+1. Which location is more vulnerabale for Bicycle and/or Pedestrain Accident?
+2. What are Bicycle and/or Pedestrain Accident factor?
 
 ## Datasets Used:
-NYC Pedestrian/Bicycle Crash Data: https://www.policedatainitiative.org/crash-data/
-Police Data Initiative Dashboard: https://www.policedatainitiative.org/datasets/#all
-Open Data better API information for calls  from Chapel Hill -PL https://www.chapelhillopendata.org/explore/dataset/pedestrian-crashes-chapel-hill-region/api/
-https://www.chapelhillopendata.org/explore/dataset/bicycle-crash-data-chapel-hill-region/api/
+### Bicycle Crashes:
+This data set maps the locations of crashes involving bicyclists in the Chapel Hill Region of North Carolina.The data comes from police-reported bicycle-motor vehicle and pedestrian-motor vehicle collisions that occurred on the public roadway network, public vehicular areas and private properties (if reported) from January 2007 through December 2013. Users are able to click and view information specific to each crash. Information for each crash includes: County, City, Crash Date, Crash Day, Crash Group, Crash Location, Crash Time, Crash Severity, Bike/Pedestrian Age Group, Bike/Pedestrian Alcohol Detected, Bike Direction, Bike/Pedestrian Injury, Bike/Pedestrian Position, Bike/Pedestrian Race, Bike/Pedestrian Sex, Ambulance Response, Driver Age Group, Driver Estimated Speed, Speed Limit, Driver Alcohol Detected, Driver Injury, Driver Race, Driver Sex, Driver Vehicle Type, Hit and Run, Development, Light Condition, Locality, Number of Lanes, Road Characteristics/Class/Condition/Configuration, Road Defects/Features, Traffic Control, Crash Type, and/or Weather. Crash identification numbers have been removed from the data for protection of privacy. Crash records were obtained NCDOT’s Traffic Engineering Accident Analysis System (TEAAS).
+From <https://catalog.data.gov/dataset/bicycle-crashes>
+ 
+### Pedestrian Crashes:
+This data set maps the locations of crashes involving pedestrians in the Chapel Hill Region of North Carolina.The data comes from police-reported bicycle-motor vehicle and pedestrian-motor vehicle collisions that occurred on the public roadway network, public vehicular areas and private properties (if reported) from January 2007 through December 2013. Users are able to click and view information specific to each crash. Information for each crash includes: County, City, Crash Date, Crash Day, Crash Group, Crash Location, Crash Time, Crash Severity, Bike/Pedestrian Age Group, Bike/Pedestrian Alcohol Detected, Bike Direction, Bike/Pedestrian Injury, Bike/Pedestrian Position, Bike/Pedestrian Race, Bike/Pedestrian Sex, Ambulance Response, Driver Age Group, Driver Estimated Speed, Speed Limit, Driver Alcohol Detected, Driver Injury, Driver Race, Driver Sex, Driver Vehicle Type, Hit and Run, Development, Light Condition, Locality, Number of Lanes, Road Characteristics/Class/Condition/Configuration, Road Defects/Features, Traffic Control, Crash Type, and/or Weather. Crash identification numbers have been removed from the data for protection of privacy. Crash records were obtained NCDOT’s Traffic Engineering Accident Analysis System (TEAAS).
+From <https://catalog.data.gov/dataset/pedestrian-crashes>
 
 ## Breakdown of Tasks:
 1. Get dataset from sources.
 2. Cleaned data.
-3. Breakdown and analyze the dataset.
-4. Compare relative numbers of ATMs and contrast that with demographic data. 
-5. Examine ATMs in a given geographic area correlated with population density, and other social economic factors. 
-6. Examine various types of ATMs
-7. Graph using matplotlib.
-
-## ATM Data Search Method:
-Pulled 1000 random latitudes and longitudes in the Richmond region
-Used Latitude and Longitude with Google’s API “near by me” to generate ATM name & street addresses
-Google search had a 60 item limit
-Used ATM addresses and Google’s Geo mapping to retrieve zip codes
-First pull was 30 miles – 60 ATMs
-Second pull was 100 3 mile radius pulls – 67 ATMs after dups
-3rd pull was 200 3 mile radius pulls – 67 ATMs (none new)
-4th pull of 1000 (1000 meter) pulls – 147 ATMs – maxing the 60 ATM limit
-Census, pulled 2013-2017 using the same keys, choose to use the most current census data (2017)
-First merged ATM onto the census data ultimately showing numerous null values for missing data
-Changed the join to add census data into the ATM file, thus eliminating null values
+3. Data abbreviations from json:
+    Severity = crsh_sevri
+    Road conditions = rd_conditi
+    Drivers age group = drvrage_gr
+    Speed = drvr_estsp
+    Intoxication (driver) = drvr_alc_d
+    Intoxication (biker) = crashalcoh
+4. Getting data from pedestrian and bike json  into database - Mongodb
+5. Markers  - leaflet map with generic markers for a starting place. Leaflet layers - like in the bike stations -- layers for pedestrian and bicycle - overlay for factors that are similar and different based on crash data
+6. Data wrangling - skeleton of D3 information / JSON unpacking
+7. Analyze the dataset.
+8. Extra JS Library: JQuery and FancyBox (part of HTML CSS)
+9. Visualizations:
+  Compare Location, severity of injury based on accident, time of year, date/time of crash, road conditions (weather and type of road),
+  Map - based  on accidents themselves - placement on map
+  Icons for bike and pedestrians / icons change size based on amount of accidents - options for clusters or icons
+  Color for severity -- if concentrated then you could use clusters
+  Custom D3 
+  Factors on Y axis - conditional: weather, time of day, time of year
+  Accident data on X axis- number of accidents  - pedestrian / bikes / total
+  Web page 
+  Navbar that provides links to the 2 types of maps: Geographic map of locations and D3 comparative map showing factors
 
 ## Obervation.
-
-# Majority of ATMs located in zip codes with larger HHI >$100K
-![GitHub Logo](/Bar_HHI_ATM.png)
-# 60 percent of ATM are in zip codes with populations greater than 40,000 residents
-![GitHub Logo](/Bar_Population_ATM.png)
-# ATMs located in zip codes with rent between $700-$1150
-![GitHub Logo](/Bar_Rent_ATM.png)
-# Owners of ATM in RVA
-![GitHub Logo](/Bar_long_ATM.png)
-
-# Other Observation
-50/50 split between bank and non-bank ATMs.  Expect that we are missing more non-bank owed ATMs than bank owned ATMs.
-There is a major ATM strategy difference between the big banks Wells Fargo vs Sun Trust vs. Capital One.
-Wells Fargo has 18 ATMS in the RVA area, compared to 8 and 2 for Sun Trust Bank and Capital One, respectively.
-
-# Learning and Limitations
-Ensure the data is joined in the right order, eliminating unnecessary nulls.
-Be flexible and change approach as needed, data was difficult to get; not convinced we have a complete universe of ATM data
-More time to spend with Master Card and Visa; still convinced this is possible, just not within our time frame or ability at this point
-Relied on ATMs listed in Google;  assume large organizations and a few small entities list their ATMs in google. 
+15 people were killed as a result of bicycle and pedestrian accidents from 2007-2013!
 
 # Tools Used:  Jupiter NoteBook /Python, JavaScript, HTML, MongoDB
