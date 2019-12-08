@@ -51,9 +51,9 @@ From <https://catalog.data.gov/dataset/pedestrian-crashes>
 [GitHub]https://cbwittig.github.io/Project2/index.html)
 ![GitHub Logo](Project2/img/basemap_v2.png)
 ![GitHub Logo](Project2/img/Bike_ages.png)
-![GitHub Logo](Project2/img/basemap_v2.png)
-![GitHub Logo](Project2/img/basemap_v2.png)
-![GitHub Logo](Project2/img/basemap_v2.png)
+![GitHub Logo](Project2/img/bike_carspeed.png)
+![GitHub Logo](Project2/img/bike_comparison.png)
+![GitHub Logo](Project2/img/bike_data.png)
 
 
 
