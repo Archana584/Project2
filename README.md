@@ -47,7 +47,7 @@ From <https://catalog.data.gov/dataset/pedestrian-crashes>
   Navbar that provides links to the 2 types of maps: Geographic map of locations and D3 comparative map showing factors
 
 ## Obervation.
-![GitHub Logo](/Project2/blob/master/Project2/img/basemap_v2.png)
+![GitHub Logo](Project2/blob/master/Project2/img/basemap_v2.png)
 
 15 people were killed as a result of bicycle and pedestrian accidents from 2007-2013!
 [GitHub]https://cbwittig.github.io/Project2/index.html)
